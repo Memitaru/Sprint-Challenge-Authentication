@@ -1,0 +1,35 @@
+
+  
+  .navbar {
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+    background-color: dodgerblue;
+  }
+  
+  .navbar > li > a {
+    color: #002A32;
+    text-decoration: none;
+    padding: 24px;
+    height: 16px;
+  }
+  
+  .navbar > li > a.active {
+    color: dodgerblue;
+    background-color: #002A32;
+  }
+
+  h1{
+      text-align: center;
+      padding-top: 25px;
+  }
+
+  h3{
+      text-align: center;
+      padding-top: 40px;
+  }

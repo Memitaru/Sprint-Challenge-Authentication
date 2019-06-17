@@ -5,7 +5,7 @@ function withAuth(Component){
     const Auth = (props) => {
         const isAuth = Boolean(localStorage.getItem('token'))
         
-        return isAuth ? <Component {...props} /> : <div>You are not authorized</div>
+        return isAuth ? <Component {...props} /> : <div><h3>You are not authorized</h3></div>
     }
 
     return withRouter(Auth)
