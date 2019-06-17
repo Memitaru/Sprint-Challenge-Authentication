@@ -50,6 +50,7 @@ class Login extends React.Component{
             const {username, password} = this.state;
             const result = await api.post('/login', {username, password})
             localStorage.setItem('token', result.data.token)
+            localStorage.setItem('username', result.data.username)
             this.props.history.push('/jokes')
         } catch(err) {
             console.log(err)

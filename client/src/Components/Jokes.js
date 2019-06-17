@@ -5,7 +5,8 @@ import Joke from './Joke';
 
 class Jokes extends React.Component{
     state = {
-        jokes: []
+        jokes: [],
+        username: ''
     }
 
     async componentDidMount(){
@@ -15,12 +16,15 @@ class Jokes extends React.Component{
         } catch(err) {
             console.log(err)
         }
+
+        const username = localStorage.getItem('username');
+        this.setState({username: username})
     }
 
     render(){
         return(
             <div>
-                <h2>Dad Jokes</h2>
+                <h2>Hi {this.state.username}, I'm dad.</h2>
                 {this.state.jokes.map((joke, i) => {
                     return <Joke joke={joke.joke} key={i} />
                 })}
